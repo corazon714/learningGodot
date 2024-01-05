@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://131adfwgl14l"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_ane0l"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_tt00m"]
+
+[node name="Player" type="Node3D"]
+script = ExtResource("1_ane0l")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CylinderMesh_tt00m")
