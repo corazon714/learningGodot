@@ -1,6 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://d210opairx7j8"]
+[gd_scene load_steps=10 format=3 uid="uid://ch20faynntgw7"]
 
-[ext_resource type="PackedScene" uid="uid://131adfwgl14l" path="res://player.tscn" id="1_kna0b"]
+[ext_resource type="Script" path="res://Landingpad.gd" id="1_052hf"]
+[ext_resource type="PackedScene" uid="uid://131adfwgl14l" path="res://player.tscn" id="2_komnv"]
+[ext_resource type="PackedScene" uid="uid://cumeh8s08t0wi" path="res://moving_obstacle.tscn" id="3_cdoa0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2u2j6"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -33,26 +35,31 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_xjx0x")
 
-[node name="Floor" type="CSGBox3D" parent="."]
+[node name="Floor" type="CSGBox3D" parent="." groups=["lose"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, -4, 2.08165e-12)
 use_collision = true
 size = Vector3(30, 8, 5)
 material = SubResource("StandardMaterial3D_y6p4c")
 
-[node name="Launchpad" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0.25, 2.08165e-12)
+[node name="Launchpad" type="CSGBox3D" parent="." groups=["neutral"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.99459, 0.269866, -0.00573444)
 use_collision = true
 size = Vector3(2, 0.5, 2)
 material = SubResource("StandardMaterial3D_un8bq")
 
-[node name="Landingpad" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.25, 2.08165e-12)
+[node name="Landingpad" type="CSGBox3D" parent="." groups=["goal"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0137, 0.312616, -0.0282793)
 use_collision = true
 size = Vector3(2, 0.5, 2)
 material = SubResource("StandardMaterial3D_p2vig")
+script = ExtResource("1_052hf")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, -4.21304e-16, 3.41165e-16, 3.41165e-16, 0.978148, 0.207912, -4.21304e-16, -0.207912, 0.978148, 2.08165e-12, 6, 12)
 
-[node name="Player" parent="." instance=ExtResource("1_kna0b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 1.52, 2.08165e-12)
+[node name="Player" parent="." instance=ExtResource("2_komnv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0177, 1.51036, -0.0114565)
+
+[node name="MovingObstacle" parent="." instance=ExtResource("3_cdoa0")]
+destination = Vector3(2.08165e-12, 2, 2.08165e-12)
+duration = 3.0
