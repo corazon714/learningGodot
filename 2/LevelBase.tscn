@@ -1,0 +1,74 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxoimydxlb7l2"]
+
+[ext_resource type="Material" uid="uid://dov7f2x4x7atg" path="res://materials/floor.tres" id="1_31kw1"]
+
+[node name="Floor" type="CSGBox3D" groups=["lose"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, -4, 2.08165e-12)
+material_override = ExtResource("1_31kw1")
+use_collision = true
+size = Vector3(30, 8, 5)
+material = ExtResource("1_31kw1")
+
+[node name="Wall" type="CSGBox3D" parent="."]
+transform = Transform3D(0.950413, 0.310992, 0, -0.310992, 0.950413, 0, 0, 0, 1, -14.7207, 7.00508, 0)
+size = Vector3(4, 10, 4)
+
+[node name="Wall2" type="CSGBox3D" parent="."]
+transform = Transform3D(0.706773, 0.70744, 0, -0.70744, 0.706774, 0, 0, 0, 1, -12.1519, 15.125, 0)
+size = Vector3(4, 10, 4)
+
+[node name="Wall3" type="CSGBox3D" parent="."]
+transform = Transform3D(0.00436325, 0.999991, 0, -0.999991, 0.00436324, 0, 0, 0, 1, -5.31634, 19.4776, 0)
+size = Vector3(4, 10, 4)
+
+[node name="Wall4" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.800146, 0.599806, 0, -0.599806, -0.800146, 0, 0, 0, 1, -1.33484, 18.7783, 0)
+size = Vector3(4, 10, 4)
+
+[node name="Wall5" type="CSGBox3D" parent="."]
+transform = Transform3D(0.194217, 0.980959, 0, -0.980959, 0.194217, 0, 0, 0, 1, 3.43154, 18.6641, 0)
+size = Vector3(4, 10, 4)
+
+[node name="Wall6" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.00235631, 0.999997, 0, -0.999997, -0.0023563, 0, 0, 0, 1, 10.5811, 16.5521, 0)
+size = Vector3(4, 10, 4)
+
+[node name="Wall7" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.823968, 0.566636, 0, -0.566636, -0.823968, 0, 0, 0, 1, 15.3618, 11.6002, 0)
+size = Vector3(4, 10, 4)
+
+[node name="Wall8" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.852321, -0.523019, 0, 0.523019, -0.852321, 0, 0, 0, 1, 16.4178, 5.52093, 0)
+size = Vector3(4, 10, 4)
+
+[node name="Rock" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.531838, -0.326358, 0.781433, 0.523019, -0.852321, 9.74291e-16, 0.666032, 0.408705, 0.623989, 14.6334, 5.52093, -5.28648)
+size = Vector3(4, 10, 4)
+
+[node name="Rock2" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.636561, 0.747493, 0.189853, -0.388833, -0.523655, 0.75802, 0.666032, 0.408705, 0.623989, 11.2389, 5.52093, -5.28648)
+size = Vector3(4, 10, 4)
+
+[node name="Rock3" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.910056, 0.0901098, -0.404572, -0.388833, -0.523655, 0.75802, -0.143551, 0.847152, 0.511593, 4.18884, 4.36892, -5.28648)
+size = Vector3(4, 16.8956, 3.70491)
+
+[node name="Rock4" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.312598, -0.698971, -0.643213, -0.388833, -0.523655, 0.75802, -0.866655, 0.487058, -0.10809, -1.01049, 4.46667, -5.31451)
+size = Vector3(4, 10, 6.98136)
+
+[node name="Rock5" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.357792, -0.723175, 0.590765, -0.166736, 0.671954, 0.72158, -0.918795, 0.159674, -0.360999, -5.59838, 4.36892, -5.28648)
+size = Vector3(4, 10, 4)
+
+[node name="Rock6" type="CSGBox3D" parent="."]
+transform = Transform3D(-0.119997, 0.519612, 0.845934, -0.24461, 0.810347, -0.532451, -0.962168, -0.270816, 0.029863, -13.1575, 6.19869, -5.28648)
+size = Vector3(4, 18.0625, 4)
+
+[node name="Rock7" type="CSGBox3D" parent="."]
+transform = Transform3D(0.176886, -0.537532, 0.824482, 0.541677, 0.752582, 0.374443, -0.821765, 0.380369, 0.424289, -2.03939, 11.9582, -5.21078)
+size = Vector3(4, 18.0625, 4)
+
+[node name="Rock8" type="CSGBox3D" parent="."]
+transform = Transform3D(0.564348, 0.646273, 0.513657, -0.0788274, 0.661552, -0.745745, -0.821765, 0.380369, 0.424289, 12.2047, 11.9582, -5.21078)
+size = Vector3(4, 18.0625, 4)
