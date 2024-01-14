@@ -1,7 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://dfmyaaejgql26"]
+[gd_scene load_steps=11 format=3 uid="uid://dfmyaaejgql26"]
 
+[ext_resource type="Material" uid="uid://chudmcdl58hno" path="res://materials/obstacle.tres" id="1_eovl5"]
 [ext_resource type="Script" path="res://Landingpad.gd" id="1_eyuv0"]
 [ext_resource type="PackedScene" uid="uid://131adfwgl14l" path="res://player.tscn" id="2_671je"]
+[ext_resource type="PackedScene" uid="uid://cxoimydxlb7l2" path="res://LevelBase.tscn" id="3_15c3d"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2u2j6"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -34,14 +36,9 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_xjx0x")
 
-[node name="Floor" type="CSGBox3D" parent="." groups=["lose"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, -4, 2.08165e-12)
-use_collision = true
-size = Vector3(30, 8, 5)
-material = SubResource("StandardMaterial3D_y6p4c")
-
 [node name="Obstacle" type="CSGBox3D" parent="." groups=["lose"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.91278e-05, 2.49049, -0.0102253)
+material_override = ExtResource("1_eovl5")
 use_collision = true
 size = Vector3(15, 5, 3)
 material = SubResource("StandardMaterial3D_y6p4c")
@@ -65,3 +62,5 @@ transform = Transform3D(1, -4.21304e-16, 3.41165e-16, 3.41165e-16, 0.978148, 0.2
 
 [node name="Player" parent="." instance=ExtResource("2_671je")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0177, 1.51036, -0.0114565)
+
+[node name="Floor" parent="." instance=ExtResource("3_15c3d")]
